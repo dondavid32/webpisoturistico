@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 700" width="1920" height="700" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgb(83,146,82)"/><stop offset="1" stop-color="rgb(44,84,43)"/></linearGradient></defs>
+<rect width="1920" height="700" fill="url(#g)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"><rect x="844.8" y="206.0" width="230.39999999999998" height="163.20000000000002" rx="15.36"/><circle cx="960.0" cy="288.56" r="46.08"/></g>
+<text x="960.0" y="446.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="42.239999999999995" fill="#fff" fill-opacity=".8" letter-spacing="5.76">FOTO FRANJA 2</text>
+</svg>

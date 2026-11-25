@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" width="900" height="1000" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgb(163,143,91)"/><stop offset="1" stop-color="rgb(100,87,52)"/></linearGradient></defs>
+<rect width="900" height="1000" fill="url(#g)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"><rect x="396.0" y="432.5" width="108.0" height="76.5" rx="7.2"/><circle cx="450.0" cy="471.2" r="21.6"/></g>
+<text x="450.0" y="545.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.799999999999997" fill="#fff" fill-opacity=".8" letter-spacing="2.7">FOTO ALREDEDORES 2</text>
+</svg>

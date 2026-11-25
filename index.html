@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartamento Nabrarir | Piso turístico</title>
+  <meta name="description" content="Piso turístico. Consulta disponibilidad y reserva directamente con nosotros.">
+  <!-- Para compartir en redes y WhatsApp. PENDIENTE cuando haya dominio y fotos reales: añadir og:url y og:image
+       con la dirección completa, p. ej. content="https://www.TU-DOMINIO.com/img/compartir.jpg" (1200 x 630 px) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Apartamento Nabrarir">
+  <meta property="og:title" content="Apartamento Nabrarir | Piso turístico">
+  <meta property="og:description" content="Piso turístico. Consulta disponibilidad y reserva directamente con nosotros.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Sin JavaScript: el contenido se ve sin la animación de entrada -->
+  <noscript><style>body { padding-top: 0; } .aparece { opacity: 1; transform: none; }</style></noscript>
+</head>
+<body class="home">
+  <div id="cabecera"></div>
+  <noscript>
+    <!-- Menú básico para quien tenga JavaScript desactivado. Si cambias el menú en js/config.js, cámbialo también aquí. -->
+    <nav class="sin-js" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="el-piso.html">El piso</a>
+      <a href="como-llegar.html">Cómo llegar</a>
+      <a href="que-ver.html">Qué ver</a>
+      <a href="donde-comer.html">Dónde comer</a>
+      <a href="termas.html">Termas</a>
+      <a href="https://www.nasepi.com/" target="_blank" rel="noopener">Rutas en quad</a>
+      <a href="senderismo-y-bicicleta.html">Senderismo y bicicleta</a>
+      <a href="rutas-a-caballo.html">Rutas a caballo</a>
+      <a href="rutas-nauticas.html">Rutas náuticas y rafting</a>
+      <a href="rutas-en-catamaran.html">Rutas en catamarán</a>
+      <a href="rutas-en-playas-fluviales.html">Rutas en playas fluviales</a>
+      <a href="villas-y-ferias.html">Villas y ferias</a>
+      <a href="escapadas.html">Escapadas</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <a href="politica-cookies.html">Cookies</a>
+    </nav>
+  </noscript>
+
+  <main>
+    <!-- PORTADA: foto de fondo, o vídeo de YouTube si pones su ID en js/config.js -->
+    <section class="portada" data-video-portada style="background-image:url('img/galeria/comedor-cocina.jpg')"></section>
+
+    <!-- BUSCADOR DE FECHAS -->
+    <form class="reserva">
+      <label class="reserva__campo">
+        <span class="reserva__etiqueta">Check-in</span>
+        <span class="reserva__valor"></span>
+        <input type="date" id="entrada" aria-label="Fecha de entrada">
+      </label>
+      <label class="reserva__campo">
+        <span class="reserva__etiqueta">Check-out</span>
+        <span class="reserva__valor"></span>
+        <input type="date" id="salida" aria-label="Fecha de salida">
+      </label>
+      <label class="reserva__campo">
+        <span class="reserva__etiqueta">Adultos</span>
+        <select id="adultos">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+        </select>
+      </label>
+      <div class="reserva__campo">
+        <button class="btn btn--redondo" type="submit">Buscar</button>
+      </div>
+    </form>
+
+    <!-- BIENVENIDOS -->
+    <section class="bloque aparece">
+      <div class="bloque__dentro">
+        <h2 class="titulo">Bienvenidos</h2>
+        <div class="separador"></div>
+        <p><strong data-sitio="nombre"></strong>, un piso turístico totalmente equipado, está ubicado en la Rúa San Pedro 1, 2º, 32005 Ourense.</p>
+        <p>Ideal para descansar y conocer la ciudad a tu ritmo. Con capacidad para 4 huéspedes: familias, parejas, grupos de amigos y todo tipo de viajeros son bienvenidos.</p>
+        <p>Disfruta de su balcón, su luminoso salón-cocina y su ubicación céntrica, en pleno casco histórico.</p>
+        <p>A 2 minutos a pie de la Catedral y la Praza Maior, y con autobús urbano (parada junto a Correos) y aparcamiento muy cerca.</p>
+      </div>
+    </section>
+
+    <!-- TIPOS DE ALOJAMIENTO -->
+    <section class="bloque aparece">
+      <div class="bloque__dentro">
+        <h2 class="titulo">Tipos de alojamiento</h2>
+      </div>
+    </section>
+    <section class="columnas aparece">
+      <div class="col-imagen" style="background-image:url('img/que-ver/cerca/puente-romano.jpg')" role="img" aria-label="Puente Romano de Ourense reflejado en el río Miño">
+        <span class="portada__credito">Foto: Roberto Chamoso G (CC BY-SA 3.0 es), Wikimedia Commons</span>
+        <div>
+          <h3>Vacacional</h3>
+          <hr>
+          <p>Alquileres de fin de semana, puentes, 1 semana, 1 mes...</p>
+        </div>
+      </div>
+      <div class="col-imagen" style="background-image:url('img/que-ver/cerca/praza-do-ferro.jpg')" role="img" aria-label="Praza do Ferro con su fuente y terrazas">
+        <span class="portada__credito">Foto: Jose Luis Cernadas Iglesias (CC BY 2.0), Wikimedia Commons</span>
+        <div>
+          <h3>Estancia fija</h3>
+          <hr>
+          <p>Descuentos en estancias de un fin de semana al mes, de tu piso turístico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="bloque aparece">
+      <div class="bloque__dentro">
+        <h2 class="titulo">Contacto</h2>
+        <p>Contacta con nosotros para más información acerca de los diferentes tipos de alquiler</p>
+        <p class="mt"><a class="btn" href="contacto.html">Contáctanos</a></p>
+      </div>
+    </section>
+
+    <!-- VÍDEO: pon el ID de YouTube en js/config.js (videoPiso). Si no hay vídeo, borra esta sección -->
+    <section class="video aparece" data-video-piso style="background-image:url('img/video.svg')"></section>
+
+    <!-- FRANJA CON FOTO -->
+    <section class="franja" style="background-image:url('img/galeria/salon.jpg')" role="img" aria-label="Salón del piso">
+      <a class="btn" href="el-piso.html">Descubre el piso</a>
+    </section>
+
+    <!-- ALREDEDORES -->
+    <section class="tercios aparece">
+      <div class="tercio tercio--foto" style="background-image:url('img/que-ver/cerca/rua-san-miguel.jpg')" role="img" aria-label="Rúa de San Miguel en el casco viejo, con la torre de la Catedral">
+        <span class="portada__credito">Foto: Luis Miguel Bugallo Sánchez (CC BY-SA 4.0), Wikimedia Commons</span>
+      </div>
+      <div class="tercio">
+        <div>
+          <h3>Alrededores</h3>
+          <p><strong>¿A qué esperas?</strong> Descubre lugares mágicos y vive experiencias únicas.</p>
+          <p>Desde <span data-sitio="nombre"></span> te proponemos planes para todo tipo de huéspedes: casco histórico, termas, rutas, gastronomía...</p>
+        </div>
+      </div>
+      <div class="tercio tercio--foto" style="background-image:url('img/que-ver/paseo-mino.jpg')" role="img" aria-label="Puente Romano de Ourense sobre el río Miño">
+        <span class="portada__credito">Foto: Mentxuwiki (CC BY-SA 4.0), Wikimedia Commons</span>
+      </div>
+    </section>
+
+    <section class="bloque bloque--ultimo aparece">
+      <a class="btn btn--borde" href="entorno.html">Descubre el piso y sus alrededores</a>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

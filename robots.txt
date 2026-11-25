@@ -1,0 +1,5 @@
+# PENDIENTE: cambia TU-DOMINIO por el dominio real cuando esté contratado.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.TU-DOMINIO.com/sitemap.xml
