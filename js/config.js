@@ -3,7 +3,8 @@
    (cabecera, pie, mapa, WhatsApp, botones de reserva y formulario).
    ========================================================================== */
 const SITIO = {
-  nombre: "Apartamento Nabrarir",     // línea grande del logo (se ve en mayúsculas)
+  nombre: "Apartamento Nabrarir",          // línea grande del logo (se ve en mayúsculas)
+  footerCreditos: "David Rodríguez Rubio", // nombre que sale en el © del pie de página
   subtitulo: "",                      // línea pequeña del logo, debajo del nombre. Vacío = no aparece
   direccion1: "Rúa San Pedro 1, 2º",
   direccion2: "32005 Ourense",
@@ -19,9 +20,10 @@ const SITIO = {
   // Sale en el pie, en las normas de "El piso" y en el aviso legal. Vacío = no se muestra.
   registro: "",
 
-  // Titular de la web: salen en el aviso legal y en la política de privacidad.
-  titular: "[Nombre y apellidos o razón social del titular]",
-  nif: "[NIF / CIF]",
+  // Titular de la web: salen en el aviso legal, en la política de privacidad y en el formulario de contacto.
+  titular: "NABRARIR S.L.",
+  nif: "B21717194",                               // CIF de la empresa
+  domicilioFiscal: "Mateo de Prado, nº 12, 32002 Ourense",
 
   // Enlace del motor de reservas (Amenitiz, Booking, Airbnb...).
   // Vacío = los botones "Reservar" y "Buscar" llevan a la página de contacto.
@@ -64,10 +66,12 @@ const SITIO = {
     { texto: "Rutas", hijos: [
       { texto: "Rutas en quad", url: "https://www.nasepi.com/" },   // web externa de quads: se abre en otra pestaña
       { texto: "Senderismo y bicicleta", url: "senderismo-y-bicicleta.html" },
-      { texto: "Rutas a caballo", url: "rutas-a-caballo.html" },
-      { texto: "Rutas náuticas y rafting", url: "rutas-nauticas.html" },
+      { texto: "Termas", url: "termas.html?desde=rutas" },         // la misma página que en Entorno; "?desde=rutas" hace que se marque Rutas y no Entorno
       { texto: "Rutas en catamarán", url: "rutas-en-catamaran.html" },
+      { texto: "Rutas náuticas y rafting", url: "rutas-nauticas.html" },
       { texto: "Rutas en playas fluviales", url: "rutas-en-playas-fluviales.html" },
+      { texto: "Rutas a caballo", url: "rutas-a-caballo.html" },
+      { texto: "Pesca", url: "pesca.html" },
       { texto: "Villas y ferias", url: "villas-y-ferias.html" },
       { texto: "Escapadas", url: "escapadas.html" }
     ] },

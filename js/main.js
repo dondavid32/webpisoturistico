@@ -11,11 +11,22 @@
       <span class="logo__nombre">${esc(S.nombre)}</span>${S.subtitulo ? `<span class="logo__sub">${esc(S.subtitulo)}</span>` : ""}</a>`;
 
   // Enlace del menú: las direcciones a otras webs (http...) se abren en una pestaña nueva
-  const enlace = (m, extra = "") => `<a href="${m.url}"${/^https?:/.test(m.url) ? ' target="_blank" rel="noopener"' : ""}${extra}>${esc(m.texto)}</a>`;
+  // Sin "url" (p. ej. "Pesca" mientras no tenga página) sale como texto, sin enlace
+  const enlace = (m, extra = "") => !m.url ? `<span class="sin-enlace"${extra}>${esc(m.texto)}</span>` : `<a href="${m.url}"${/^https?:/.test(m.url) ? ' target="_blank" rel="noopener"' : ""}${extra}>${esc(m.texto)}</a>`;
+
+  // Apartado del menú que se marca en color. Si la página está en dos apartados (Termas: Entorno y Rutas),
+  // manda el enlace con el que se llegó: "termas.html?desde=rutas" marca Rutas; "termas.html" marca Entorno
+  const sinConsulta = (u) => (u || "").split(/[?#]/)[0];
+  const esActual = (h) => sinConsulta(h.url) === paginaActual;
+  const padres = S.menu.filter((m) => esActual(m) || (m.hijos || []).some(esActual));
+  const marcado = padres.length < 2 ? padres[0]
+    : padres.find((m) => (m.hijos || []).some((h) => esActual(h) && location.search && h.url.endsWith(location.search)))
+      || padres.find((m) => (m.hijos || []).some((h) => esActual(h) && !h.url.includes("?")))
+      || padres[0];
 
   const menu = `<ul class="menu">${S.menu.map((m) => {
     const hijos = m.hijos || [];
-    const activo = (m.url === paginaActual || hijos.some((h) => h.url === paginaActual)) ? ' class="activo"' : "";
+    const activo = m === marcado ? ' class="activo"' : "";
     const sub = hijos.length ? `<ul class="submenu">${hijos.map((h) => `<li>${enlace(h)}</li>`).join("")}</ul>` : "";
     // Sin "url" el elemento solo abre su desplegable (como "Rutas")
     const titulo = m.url ? enlace(m, activo) : `<span${activo} tabindex="0">${esc(m.texto)}</span>`;
@@ -81,7 +92,7 @@
         <div class="pie__col pie__centro">
           ${logo}
           <div class="pie__redes">${redes}</div>
-          <p class="pie__copy">© ${new Date().getFullYear()} ${esc(S.nombre)}</p>
+          <p class="pie__copy">© ${new Date().getFullYear()} ${esc(S.footerCreditos)}</p>
         </div>
         <div class="pie__col pie__dcha">
           <p><strong>Menú</strong></p>
@@ -90,6 +101,7 @@
       </div>
       <p class="pie__legal">
         <a href="aviso-legal.html">Aviso legal</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
         <a href="politica-privacidad.html">Política de privacidad</a>
         <a href="politica-cookies.html">Política de cookies</a>
         <a href="#" data-cookies>Configurar cookies</a>
